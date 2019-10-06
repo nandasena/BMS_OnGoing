@@ -28,6 +28,7 @@ import { objectTypeAnnotation } from '@babel/types';
 import Spinner from 'react-bootstrap/Spinner';
 
 import _ from 'lodash';
+import { Link } from "react-router-dom";
 
 const Widget03 = lazy(() => import('../../views/Widgets/Widget03'));
 
@@ -107,7 +108,7 @@ class Dashboard extends React.Component {
           else {
 
               return  this.props.Invoices.map( invoice => {
-debugger;
+
                 if(this.props.Invoices.length > 0) {
                     return(
                       <tr className="" key={invoice.invoiceNumber}>
@@ -133,6 +134,14 @@ debugger;
           }
   }
 
+  renderAddInvoice() {
+
+    return(  <div className="float-right">
+              <Link to="/invoice/new"><Button block color="primary">Add{' +'}</Button></Link>
+            </div>
+          )
+  }
+
   render() {
 
     return (
@@ -142,11 +151,10 @@ debugger;
             <Card>
               <CardHeader>
                 {/* Traffic {' & '} Sales */}
-                Invoices
+                <strong>Invoices</strong>
+                {this.renderAddInvoice()}
               </CardHeader>
               <CardBody>
-               
-                <br />
                 <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
                   <thead className="thead-light">
                   <tr>
@@ -207,7 +215,7 @@ debugger;
 }
 
 const mapStateToProps = (state) => {
-debugger;
+
     return {
        Invoices: Object.values(state.invoices)
     };
