@@ -30,6 +30,7 @@
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.1",
     "react-bootstrap": "^1.0.0-beta.14",
+    "react-bootstrap-date-picker-react16": "^4.0.2",
     "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.1",

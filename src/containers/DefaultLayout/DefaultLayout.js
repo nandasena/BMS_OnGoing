@@ -20,9 +20,7 @@ import navigation from '../../_nav';
 // routes config
 import routes from '../../routes';
 
-//Invoice Opertation Pages
-import Invoice from '../../views/Invoice/Invoice'
-///
+
 
 const DefaultAside = React.lazy(() => import('./DefaultAside'));
 const DefaultFooter = React.lazy(() => import('./DefaultFooter'));
@@ -72,7 +70,6 @@ class DefaultLayout extends Component {
                         )} />
                     ) : (null);
                   })}
-                   {/* <Route exact path="/invoice/new" Component={InvoiceCreate}></Route> */}
                   <Redirect from="/" to="/dashboard" />
                 </Switch>
               </Suspense>
